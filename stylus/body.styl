@@ -1,0 +1,288 @@
+/*! Typebase.less v0.1.0 | MIT License */
+/* Setup */
+html {
+	/* Change default typefaces here */
+	font-family: serif;
+	font-size: 1.2em;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	font-size: 17px;
+	color: #0a1826;
+	background: #fff;
+	font-family: sans,sans-serif;
+	font-weight: 300;
+	line-height: 1.64706;
+	letter-spacing: .012em;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+/* Copy & Lists */
+p {
+	line-height: 1.6rem;
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+ul,
+ol {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+	line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+dd, dl, ol, p, pre, ul {
+	margin-bottom: 1.64706em;
+}
+dd
+	margin-left 0
+dt
+	font-weight 600
+blockquote {
+	line-height: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* Change heading typefaces here */
+	font-family: sans-serif;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	line-height: 1.5rem;
+}
+h1 {
+	font-size: 2.797em;
+	line-height: 3.3564rem;
+	margin-top: 3rem;
+	font-weight: 300;
+}
+h2 {
+	font-size: 2.452em;
+	line-height: 3rem;
+	margin-top: 3rem;
+	font-weight: 400;
+}
+h3 {
+	font-size: 2.138em;
+	line-height: 2.5656rem;
+	font-weight: 500;
+}
+h4 {
+	font-size: 1.853em
+	line-height: 2.2236rem;
+	font-weight: 600;
+}
+h5 {
+	font-size: 1.594em;
+	line-height: 1.9128rem;
+	font-weight: 400;
+}
+h6 {
+	font-size: 1.4rem;
+	line-height: 1.68rem;
+	text-transform uppercase
+	font-weight: 600;
+	color: gray1
+}
+/* Tables */
+table {
+	margin-top: 1.5rem;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+table td,
+table th {
+	padding: 0;
+	line-height: 33px;
+}
+/* Code blocks */
+code {
+	vertical-align: bottom;
+	background-color: #f3f5f6
+	color: #3c4752;
+	padding: .1em .4em
+	margin -.1em .2em
+	border-radius: 5px;
+}
+pre code {
+	padding: 1em;
+	display: block;
+	line-height: 1.3rem;
+	overflow: auto;
+	white-space: pre;
+	margin: 0;
+	-webkit-overflow-scrolling: touch;
+}
+/* Leading paragraph text */
+.lead {
+	font-size: 1.414rem;
+	line-height 1.2em
+}
+/* Hug the block above you */
+.hug {
+	margin-top: 0;
+}
+
+kbd
+	background-color: black;
+	color: white;
+	padding: .1em .4em
+	margin -.1em .2em
+	border-radius: 5px;
+
+hr
+	border: 0;
+	border-bottom: 1px solid;
+	height: 0;
+	margin: 1.6em 0;
+	clear: both;
+	
+// Buttons
+button, input[type="submit"], input[type="reset"], input[type="button"], .btn, ::-webkit-file-upload-button
+	padding .5em 1em
+	margin -.5em -1em
+	background-color transparent
+	border 0
+	font-weight bold
+	text-transform uppercase
+	font-feature-settings "case" 1
+	letter-spacing .1em
+	outline 0
+	cursor pointer
+	position relative
+	font-size medium
+	&:hover
+		border-bottom 0
+	&.outline
+		border 2px solid
+	&.block
+		color white
+		background-color: rgb(1, 188, 166)
+		background-image: linear-gradient(160deg,rgba(255,255,255,.4),rgba(0,0,0,.4));
+		background-blend-mode: overlay;
+	&::after
+		transition .3s
+		content: ""
+		position: absolute;
+		left: 1em;
+		right: 1em;
+		bottom: .3em;
+		transform: scale3d(1,.2,1)translate3d(0,8px,0);
+		opacity: 0;
+		background: currentColor;
+		height: 2px;
+		pointer-events: none;
+	&:hover::after, &:focus::after
+		opacity 1
+		transform scale3d(1,1,1)translate3d(0,0,0)
+
+// Links
+a, .link
+	color: inherit;
+	border-bottom: 1px solid;
+	cursor: pointer;
+	text-decoration none
+	font-weight inherit
+	&:hover
+		border-bottom-color link-color
+
+// TABLE
+/* FIX */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TABLES */
+
+table {
+	width:100%;
+	margin-bottom: 3em;
+	word-wrap: normal;    /* 12 column layout fixes begin */
+	table-layout: fixed;
+	display: table;
+	overflow: hidden;
+	overflow-x: auto;     /* 12 column layout fixes end */
+}
+
+table thead tr {
+	border-bottom: 1px solid #333;
+}
+
+table thead tr th {
+	font-weight:600;
+	color: #333;
+	padding: 3px 1em 3px 0;
+	vertical-align: bottom;
+	text-align: left;
+	line-height inherit
+}
+
+table tr {
+	border-bottom: 1px solid #e6e6e6;
+}
+
+table tr td {
+	color: #666;
+	line-height: 1.5em;
+	padding: .5em 1em .5em 0;
+	vertical-align: top;
+}
+
+@media all and (max-width: 735px) {
+	table thead tr th,
+	table tr td {
+		/*font-size: 11px;*/
+		line-height:1.2em;
+	}
+}
+
+
+// INPUTS
+input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="tel"], input[type="file"], input[type="password"], input[type="color"], textarea, select
+	font-size 1em
+	outline none
+	border none
+	webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	background-color: rgba(224, 224, 224, 0.7);
+	margin-bottom 3px
+	border-radius 0
+	transition .3s
+	padding 0.35em 0.75em
+	font-family Philippa
+	width 100%
+	&:active, &:focus
+		background-color rgba(207, 206, 206, 0.7)
+
+// fix for textarea resize delay
+textarea
+	transition 0ms
+
+// fix for color spanning 100% height
+input[type="color"]
+	height 2em
+
+
+// HELPERS
+
+// text helpers
+.txt
+	for i in right center left
+		&-{i}
+			text-align i

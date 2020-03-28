@@ -1,0 +1,15 @@
+// All the styles
+fontstyles = { Light: 300, Regular: 400, Medium: 500, SemiBold: 600 }
+
+// fontnames
+fontnames = Philippa Antipode
+
+// Loop font-names
+for fontname in fontnames
+	// Loop styles and alias
+	for fontalias, fontweight in fontstyles
+		// Render the result
+		@font-face
+			font-family fontname
+			src url('/data/fonts/'+fontname+'-'+fontalias+'.woff')
+			font-weight fontweight
