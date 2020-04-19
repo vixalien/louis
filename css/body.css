@@ -341,6 +341,33 @@ textarea {
 }
 input[type="color"] {
   height: 2em;
+  cursor: pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid #000;
+  display: inline-flex;
+  margin: 0;
+  margin-right: 0.3em;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+input[type="radio"] {
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  background-size: auto;
+  background-color: #000;
+}
+input[type="checkbox"]:checked {
+  background-size: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
 }
 .txt-right {
   text-align: right;

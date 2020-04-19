@@ -1,0 +1,24 @@
+body {
+    background: #282831;
+}
+
+canvas {
+    width: 800px;
+    height: 130px;
+    margin: 2rem auto;
+		position: relative;
+}
+
+.preview-bar {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 5px;
+	background-color: white;
+}
+
+audio {
+	width: 100%;
+}
