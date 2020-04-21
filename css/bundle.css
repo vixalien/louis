@@ -1,3 +1,4 @@
+@charset "utf-8";
 *,
 ::before,
 ::after {
@@ -403,7 +404,7 @@ h6 {
   font-family: sansserif;
   margin-top: 1.5rem;
   margin-bottom: 0;
-  line-height: 1.5rem;
+  line-height: 1.2;
 }
 h1 {
   font-size: 2.797em;
@@ -430,12 +431,12 @@ h4 {
 h5 {
   font-size: 1.594em;
   line-height: 1.9128rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 h6 {
   font-size: 1.4rem;
   line-height: 1.68rem;
-  texttransform: uppercase;
+  text-transform: uppercase;
   font-weight: 600;
   color: #727272;
 }
@@ -487,85 +488,6 @@ hr {
   margin: 1.6em 0;
   clear: both;
 }
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-.btn,
-::webkitfileuploadbutton {
-  padding: 0.5em 1em;
-  margin: 0.5em 1em;
-  background-color: transparent;
-  border: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-feature-settings: "case" 1;
-  letter-spacing: 0.1em;
-  outline: 0;
-  cursor: pointer;
-  position: relative;
-  font-size: medium;
-}
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.btn:hover,
-::webkitfileuploadbutton:hover {
-  border-bottom: 0;
-}
-button.outline-,
-input[type="submit"].outline-,
-input[type="reset"].outline-,
-input[type="button"].outline-,
-.btn.outline-,
-::webkitfileuploadbutton.outline- {
-  border-: 2px solid;
-}
-button.block,
-input[type="submit"].block,
-input[type="reset"].block,
-input[type="button"].block,
-.btn.block,
-::webkitfileuploadbutton.block {
-  color: #fff;
-  background-color: #01bca6;
-  background-image: line-argradient(160deg, rgba(255,255,255,0.4), rgba(0,0,0,0.4));
-  background-blendmode: overlay;
-}
-button::after,
-input[type="submit"]::after,
-input[type="reset"]::after,
-input[type="button"]::after,
-.btn::after,
-::webkitfileuploadbutton::after {
-  transition: 0.3s;
-  content: "";
-  position: absolute;
-  left: 1em;
-  right: 1em;
-  bottom: 0.3em;
-  transform: scale3d(1, 0.2, 1) translate3d(0, 8px, 0);
-  opacity: 0;
-  background-: currentColor;
-  height: 2px;
-  pointerevents: none;
-}
-button:hover::after,
-input[type="submit"]:hover::after,
-input[type="reset"]:hover::after,
-input[type="button"]:hover::after,
-.btn:hover::after,
-::webkitfileuploadbutton:hover::after,
-button:focus::after,
-input[type="submit"]:focus::after,
-input[type="reset"]:focus::after,
-input[type="button"]:focus::after,
-.btn:focus::after,
-::webkitfileuploadbutton:focus::after {
-  opacity: 1;
-  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-}
 a,
 .link {
   color: inherit;
@@ -576,7 +498,72 @@ a,
 }
 a:hover,
 .link:hover {
-  border-bottom-color: linkcolor;
+  border-bottom-color: #456fff;
+}
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.btn {
+  padding: 0.5em 1em;
+  margin: -0.5em -1em;
+  background-color: transparent;
+  border: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-feature-settings: "case" 1;
+  letter-spacing: 0.1em;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.8em;
+}
+button:after,
+input[type="submit"]:after,
+input[type="reset"]:after,
+input[type="button"]:after,
+.btn:after {
+  transition: 0.3s;
+  content: "";
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 0.3em;
+  transform: scale3d(1, 0.2, 1) translate3d(0, 8px, 0);
+  opacity: 0;
+  background: currentColor;
+  height: 2px;
+  pointer-events: none;
+}
+button:hover::after,
+input[type="submit"]:hover::after,
+input[type="reset"]:hover::after,
+input[type="button"]:hover::after,
+.btn:hover::after,
+button:focus::after,
+input[type="submit"]:focus::after,
+input[type="reset"]:focus::after,
+input[type="button"]:focus::after,
+.btn:focus::after {
+  opacity: 1;
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+}
+button.outline,
+input[type="submit"].outline,
+input[type="reset"].outline,
+input[type="button"].outline,
+.btn.outline {
+  border: 2px solid;
+}
+button.block,
+input[type="submit"].block,
+input[type="reset"].block,
+input[type="button"].block,
+.btn.block {
+  background-color: #698ad2;
+  background-image: linear-gradient(160deg, rgba(255,255,255,0.4), rgba(0,0,0,0.4));
+  background-blend-mode: overlay;
+  color: #fff;
 }
 table {
   border-collapse: collapse;
@@ -629,8 +616,8 @@ input[type="color"],
 textarea,
 select {
   font-size: 1em;
-  outline-: none;
-  border-: none;
+  outline: none;
+  border: none;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(224,224,224,0.7);
@@ -692,18 +679,38 @@ input[type="radio"]:checked {
   background-size: auto;
   background-color: #000;
 }
-input[type="checkbox"]:checke {
+input[type="checkbox"]:checked {
   background-size: 100%;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
 }
-.txtright {
-  text-align: $i;
+.txt-right {
+  text-align: right;
 }
-.txtcenter {
-  text-align: $i;
+.txt-center {
+  text-align: center;
 }
-.txtleft {
-  text-align: $i;
+.txt-left {
+  text-align: left;
+}
+.flex-bar {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.flex-bar .flex-tab {
+  flex: 1;
+}
+.sheet-black {
+  background-color: #727272;
+  color: #fff;
+}
+.sheet-gray {
+  background-color: #0a1826;
+  color: #fff;
+}
+.sheet-light {
+  background-color: #92a1b1;
+  color: rgba(255,255,255,0.702);
 }
 body {
   font-family: Antipode;

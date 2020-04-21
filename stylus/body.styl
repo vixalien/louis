@@ -64,7 +64,7 @@ h6 {
 	font-family: sansserif;
 	margin-top: 1.5rem;
 	margin-bottom: 0;
-	line-height: 1.5rem;
+	line-height: 1.2;
 }
 h1 {
 	font-size: 2.797em;
@@ -91,12 +91,12 @@ h4 {
 h5 {
 	font-size: 1.594em;
 	line-height: 1.9128rem;
-	font-weight: 400;
+	font-weight: 600;
 }
 h6 {
 	font-size: 1.4rem;
 	line-height: 1.68rem;
-	texttransform uppercase
+	text-transform uppercase
 	font-weight: 600;
 	color: gray1
 }
@@ -152,45 +152,6 @@ hr
 	height: 0;
 	margin: 1.6em 0;
 	clear: both;
-	
-// Buttons
-button, input[type="submit"], input[type="reset"], input[type="button"], .btn, ::webkitfileuploadbutton
-	padding .5em 1em
-	margin .5em 1em
-	background-color transparent
-	border 0
-	font-weight bold
-	text-transform uppercase
-	font-feature-settings "case" 1
-	letter-spacing .1em
-	outline 0
-	cursor pointer
-	position relative
-	font-size medium
-	&:hover
-		border-bottom 0
-	&.outline-
-		border- 2px solid
-	&.block
-		color white
-		background-color: rgb(1, 188, 166)
-		background-image: line-argradient(160deg,rgba(255,255,255,.4),rgba(0,0,0,.4));
-		background-blendmode: overlay;
-	&::after
-		transition .3s
-		content: ""
-		position: absolute;
-		left: 1em;
-		right: 1em;
-		bottom: .3em;
-		transform: scale3d(1,.2,1)translate3d(0,8px,0);
-		opacity: 0;
-		background-: currentColor;
-		height: 2px;
-		pointerevents: none;
-	&:hover::after, &:focus::after
-		opacity 1
-		transform scale3d(1,1,1)translate3d(0,0,0)
 
 // Links
 a, .link
@@ -200,7 +161,45 @@ a, .link
 	text-decoration none
 	font-weight inherit
 	&:hover
-		border-bottom-color linkcolor
+		border-bottom-color link-color
+
+// Buttons
+button, input[type="submit"], input[type="reset"], input[type="button"], .btn
+	padding .5em 1em
+	margin -.5em -1em
+	background-color transparent
+	border 0
+	font-weight 500
+	text-transform uppercase
+	font-feature-settings "case" 1
+	letter-spacing .1em
+	outline 0
+	cursor pointer
+	position relative
+	font-size .8em
+	&:after
+		transition .3s
+		content ""
+		position: absolute;
+		left: 1em;
+		right: 1em;
+		bottom: .3em;
+		transform: scale3d(1,.2,1) translate3d(0,8px,0);
+		opacity: 0;
+		background: currentColor;
+		height: 2px;
+		pointer-events: none;
+	&:hover, &:focus
+		&::after
+			opacity: 1;
+			transform: scale3d(1,1,1)translate3d(0,0,0);
+	&.outline
+		border 2px solid
+	&.block
+		background-color hsl(221.28, 53.85%, 61.81%)
+		background-image linear-gradient(160deg,rgba(255,255,255,.4),rgba(0,0,0,.4))
+		background-blend-mode overlay
+		color white
 
 // TABLE
 /* FIX */
@@ -257,11 +256,11 @@ table tr td {
 // INPUTS
 input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="tel"], input[type="file"], input[type="password"], input[type="color"], textarea, select
 	font-size 1em
-	outline- none
-	border- none
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-	background-color: rgba(224, 224, 224, 0.7);
+	outline none
+	border none
+	-webkit-backdrop-filter saturate(180%) blur(20px);
+	backdrop-filter saturate(180%) blur(20px);
+	background-color rgba(224, 224, 224, 0.7);
 	margin-bottom 3px
 	border-radius 0
 	transition .3s
@@ -302,12 +301,32 @@ input[type="radio"]:checked {
 	background-size: auto;
 	background-color: #000;
 }
-input[type="checkbox"]:checke
+input[type="checkbox"]:checked
 	background-size: 100%;
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
 
 // text helpers
 .txt
 	for i in right center left
-		&{i}
-			text-align $i
+		&-{i}
+			text-align i
+
+// FLEX
+.flex-bar
+	display inline-flex
+	justify-content space-between
+	width 100%
+	& .flex-tab
+		flex 1
+
+// Sheets
+.sheet
+	&-black
+		background-color gray1
+		color ongray1
+	&-gray
+		background-color gray2
+		color ongray2
+	&-light
+		background-color gray3
+		color ongray3
