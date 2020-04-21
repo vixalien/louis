@@ -351,11 +351,14 @@ colors = {black: gray2, gray: gray1, light: gray3}
 
 // FLEX
 .flex-bar
+	& > *
+		margin 5px
 	&.flex-eq
 		& > *
 			flex 1
 	&.flex-resp
-		flex-direction column
+		@media (max-width 600px)
+			flex-direction column
 	display inline-flex
 	justify-content space-between
 	width 100%
@@ -367,31 +370,15 @@ colors = {black: gray2, gray: gray1, light: gray3}
 	&-black
 		background-color gray2
 		color ongray2
+		padding 10px
 	&-gray
 		background-color gray1
 		color ongray1
+		padding 10px
 	&-light
 		background-color gray3
 		color ongray3
-
-.bd
-	&-white
-		border 2px solid
-		border-color white
-	for famname, realname in colors
-		&-{famname}
-			border 2px solid
-			border-color realname
-	for size in sizes
-		&-{size}
-			border-width (size)px
-	
-.pd
-	for size in sizes
-		&-{size}
-			padding (size)px
-		&-1-em
-			padding 1em
+		padding 10px
 
 .txt-semibold
 	font-weight 600

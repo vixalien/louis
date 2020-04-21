@@ -282,7 +282,7 @@ pre {
 .container {
   padding: 1em;
 }
-@media (min-width: 34em) {
+@media (min-width: 44em) {
   .container {
     padding: 1em calc(50% - 16em);
   }
@@ -755,11 +755,16 @@ sup,
   justify-content: space-between;
   width: 100%;
 }
+.flex-bar > * {
+  margin: 5px;
+}
 .flex-bar.flex-eq > * {
   flex: 1;
 }
-.flex-bar.flex-resp {
-  flex-direction: column;
+@media (max-width: 600px) {
+  .flex-bar.flex-resp {
+    flex-direction: column;
+  }
 }
 .flex-bar .flex-tab,
 .flex-bar .flex-one {
@@ -768,75 +773,17 @@ sup,
 .sheet-black {
   background-color: #0a1826;
   color: rgba(255,255,255,0.702);
+  padding: 10px;
 }
 .sheet-gray {
   background-color: #727272;
   color: rgba(255,255,255,0.702);
+  padding: 10px;
 }
 .sheet-light {
   background-color: #92a1b1;
   color: #fff;
-}
-.bd-white {
-  border: 2px solid;
-  border-color: #fff;
-}
-.bd-black {
-  border: 2px solid;
-  border-color: #0a1826;
-}
-.bd-gray {
-  border: 2px solid;
-  border-color: #727272;
-}
-.bd-light {
-  border: 2px solid;
-  border-color: #92a1b1;
-}
-.bd-1 {
-  border-width: 1px;
-}
-.bd-2 {
-  border-width: 2px;
-}
-.bd-3 {
-  border-width: 3px;
-}
-.bd-5 {
-  border-width: 5px;
-}
-.bd-10 {
-  border-width: 10px;
-}
-.pd-1 {
-  padding: 1px;
-}
-.pd-1-em {
-  padding: 1em;
-}
-.pd-2 {
-  padding: 2px;
-}
-.pd-1-em {
-  padding: 1em;
-}
-.pd-3 {
-  padding: 3px;
-}
-.pd-1-em {
-  padding: 1em;
-}
-.pd-5 {
-  padding: 5px;
-}
-.pd-1-em {
-  padding: 1em;
-}
-.pd-10 {
   padding: 10px;
-}
-.pd-1-em {
-  padding: 1em;
 }
 .txt-semibold {
   font-weight: 600;
