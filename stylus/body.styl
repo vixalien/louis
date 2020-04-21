@@ -7,7 +7,7 @@ html {
 	font-size: 1.2em;
 	-webkit-font-smoothing: antialiased;
 }
-body {
+body, .body {
 	font-size: 17px;
 	color: #0a1826;
 	background-: #fff;
@@ -20,10 +20,11 @@ body {
 	-webkit-overflow-scrolling: touch;
 }
 /* Copy & Lists */
-p {
+p, .body {
 	line--height: 1.6rem;
 	margin-top: 1rem;
 	margin-bottom: 0;
+	text-align justify
 }
 ul,
 ol {
@@ -59,43 +60,44 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.txt-h1,
+.txt-h2,
+.txt-h3,
+.txt-h4,
+.txt-h5,
+.txt-h6,
+.txt-head {
 	/* Change heading typefaces here */
 	font-family: sansserif;
 	margin-top: 1.5rem;
 	margin-bottom: 0;
 	line-height: 1.2;
 }
-h1 {
+h1, .txt-h1 {
 	font-size: 2.797em;
-	line-height: 3.3564rem;
 	margin-top: 3rem;
 	font-weight: 300;
 }
-h2 {
+h2, .txt-h2 {
 	font-size: 2.452em;
-	line-height: 3rem;
 	margin-top: 3rem;
 	font-weight: 400;
 }
-h3 {
+h3, .txt-h3 {
 	font-size: 2.138em;
-	line-height: 2.5656rem;
 	font-weight: 500;
 }
-h4 {
+h4, .txt-h4 {
 	font-size: 1.853em
-	line-height: 2.2236rem;
 	font-weight: 600;
 }
-h5 {
+h5, .txt-h5 {
 	font-size: 1.594em;
-	line-height: 1.9128rem;
 	font-weight: 600;
 }
-h6 {
+h6, .txt-h6 {
 	font-size: 1.4rem;
-	line-height: 1.68rem;
 	text-transform uppercase
 	font-weight: 600;
 	color: gray1
@@ -307,26 +309,106 @@ input[type="checkbox"]:checked
 
 // text helpers
 .txt
-	for i in right center left
+	for i in right center left justify
 		&-{i}
 			text-align i
 
+@media (max-width: 560px)
+	.txt-justify
+		text-align:unset
+
+.txt-hyphens
+	hyphens auto
+	a
+		hyphens none
+
+.txt-ellipsis
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+
+// normal styles
+.txt
+	&-italic, em, i
+		font-size italic
+	&-bold, b, strong
+		font-weight 600
+	&-roman, h1 > em
+		font-weight normal
+	&-sub
+		font-feature-settings: "sups"
+	&-sup
+		font-feature-settings: "subs"
+
+sub,sup, .badge
+	font-size: 50%;
+	line-height: 0
+.badge
+	color #35a8c9
+
+sizes = 1 2 3 5 10
+colors = {black: gray2, gray: gray1, light: gray3}
+
 // FLEX
 .flex-bar
+	&.flex-eq
+		& > *
+			flex 1
+	&.flex-resp
+		flex-direction column
 	display inline-flex
 	justify-content space-between
 	width 100%
-	& .flex-tab
+	.flex-tab, .flex-one
 		flex 1
 
 // Sheets
 .sheet
 	&-black
-		background-color gray1
-		color ongray1
-	&-gray
 		background-color gray2
 		color ongray2
+	&-gray
+		background-color gray1
+		color ongray1
 	&-light
 		background-color gray3
 		color ongray3
+
+.bd
+	&-white
+		border 2px solid
+		border-color white
+	for famname, realname in colors
+		&-{famname}
+			border 2px solid
+			border-color realname
+	for size in sizes
+		&-{size}
+			border-width (size)px
+	
+.pd
+	for size in sizes
+		&-{size}
+			padding (size)px
+		&-1-em
+			padding 1em
+
+.txt-semibold
+	font-weight 600
+.txt-medium
+	font-weight 500
+.txt-regular
+	font-weight 400
+.txt-light
+	font-weight 300
+
+for font in serif sans-serif antipode philippa cursive handwriting auto fantasy monospace
+	.font-{font}
+		font-family font
+
+.br
+	for size in sizes
+		&-{size}
+			border-radius (size)px
+		&-1-em
+			border-radius 1em

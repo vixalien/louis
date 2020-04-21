@@ -6,7 +6,8 @@ html {
   font-size: 1.2em;
   -webkit-font-smoothing: antialiased;
 }
-body {
+body,
+.body {
   font-size: 17px;
   color: #0a1826;
   background-: #fff;
@@ -19,10 +20,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 /* Copy & Lists */
-p {
+p,
+.body {
   line--height: 1.6rem;
   margin-top: 1rem;
   margin-bottom: 0;
+  text-align: justify;
 }
 ul,
 ol {
@@ -65,43 +68,50 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.txt-h1,
+.txt-h2,
+.txt-h3,
+.txt-h4,
+.txt-h5,
+.txt-h6,
+.txt-head {
 /* Change heading typefaces here */
   font-family: sansserif;
   margin-top: 1.5rem;
   margin-bottom: 0;
   line-height: 1.2;
 }
-h1 {
+h1,
+.txt-h1 {
   font-size: 2.797em;
-  line-height: 3.3564rem;
   margin-top: 3rem;
   font-weight: 300;
 }
-h2 {
+h2,
+.txt-h2 {
   font-size: 2.452em;
-  line-height: 3rem;
   margin-top: 3rem;
   font-weight: 400;
 }
-h3 {
+h3,
+.txt-h3 {
   font-size: 2.138em;
-  line-height: 2.5656rem;
   font-weight: 500;
 }
-h4 {
+h4,
+.txt-h4 {
   font-size: 1.853em;
-  line-height: 2.2236rem;
   font-weight: 600;
 }
-h5 {
+h5,
+.txt-h5 {
   font-size: 1.594em;
-  line-height: 1.9128rem;
   font-weight: 600;
 }
-h6 {
+h6,
+.txt-h6 {
   font-size: 1.4rem;
-  line-height: 1.68rem;
   text-transform: uppercase;
   font-weight: 600;
   color: #727272;
@@ -364,23 +374,208 @@ input[type="checkbox"]:checked {
 .txt-left {
   text-align: left;
 }
+.txt-justify {
+  text-align: justify;
+}
+@media (max-width: 560px) {
+  .txt-justify {
+    text-align: unset;
+  }
+}
+.txt-hyphens {
+  hyphens: auto;
+}
+.txt-hyphens a {
+  hyphens: none;
+}
+.txt-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.txt-italic,
+.txt em,
+.txt i {
+  font-size: italic;
+}
+.txt-bold,
+.txt b,
+.txt strong {
+  font-weight: 600;
+}
+.txt-roman,
+.txt h1 > em {
+  font-weight: normal;
+}
+.txt-sub {
+  font-feature-settings: "sups";
+}
+.txt-sup {
+  font-feature-settings: "subs";
+}
+sub,
+sup,
+.badge {
+  font-size: 50%;
+  line-height: 0;
+}
+.badge {
+  color: #35a8c9;
+}
 .flex-bar {
   display: inline-flex;
   justify-content: space-between;
   width: 100%;
 }
-.flex-bar .flex-tab {
+.flex-bar.flex-eq > * {
+  flex: 1;
+}
+.flex-bar.flex-resp {
+  flex-direction: column;
+}
+.flex-bar .flex-tab,
+.flex-bar .flex-one {
   flex: 1;
 }
 .sheet-black {
-  background-color: #727272;
-  color: #fff;
+  background-color: #0a1826;
+  color: rgba(255,255,255,0.702);
 }
 .sheet-gray {
-  background-color: #0a1826;
-  color: #fff;
+  background-color: #727272;
+  color: rgba(255,255,255,0.702);
 }
 .sheet-light {
   background-color: #92a1b1;
-  color: rgba(255,255,255,0.702);
+  color: #fff;
+}
+.bd-white {
+  border: 2px solid;
+  border-color: #fff;
+}
+.bd-black {
+  border: 2px solid;
+  border-color: #0a1826;
+}
+.bd-gray {
+  border: 2px solid;
+  border-color: #727272;
+}
+.bd-light {
+  border: 2px solid;
+  border-color: #92a1b1;
+}
+.bd-1 {
+  border-width: 1px;
+}
+.bd-2 {
+  border-width: 2px;
+}
+.bd-3 {
+  border-width: 3px;
+}
+.bd-5 {
+  border-width: 5px;
+}
+.bd-10 {
+  border-width: 10px;
+}
+.pd-1 {
+  padding: 1px;
+}
+.pd-1-em {
+  padding: 1em;
+}
+.pd-2 {
+  padding: 2px;
+}
+.pd-1-em {
+  padding: 1em;
+}
+.pd-3 {
+  padding: 3px;
+}
+.pd-1-em {
+  padding: 1em;
+}
+.pd-5 {
+  padding: 5px;
+}
+.pd-1-em {
+  padding: 1em;
+}
+.pd-10 {
+  padding: 10px;
+}
+.pd-1-em {
+  padding: 1em;
+}
+.txt-semibold {
+  font-weight: 600;
+}
+.txt-medium {
+  font-weight: 500;
+}
+.txt-regular {
+  font-weight: 400;
+}
+.txt-light {
+  font-weight: 300;
+}
+.font-serif {
+  font-family: serif;
+}
+.font-sans-serif {
+  font-family: sans-serif;
+}
+.font-antipode {
+  font-family: antipode;
+}
+.font-philippa {
+  font-family: philippa;
+}
+.font-cursive {
+  font-family: cursive;
+}
+.font-handwriting {
+  font-family: handwriting;
+}
+.font-auto {
+  font-family: auto;
+}
+.font-fantasy {
+  font-family: fantasy;
+}
+.font-monospace {
+  font-family: monospace;
+}
+.br-1 {
+  border-radius: 1px;
+}
+.br-1-em {
+  border-radius: 1em;
+}
+.br-2 {
+  border-radius: 2px;
+}
+.br-1-em {
+  border-radius: 1em;
+}
+.br-3 {
+  border-radius: 3px;
+}
+.br-1-em {
+  border-radius: 1em;
+}
+.br-5 {
+  border-radius: 5px;
+}
+.br-1-em {
+  border-radius: 1em;
+}
+.br-10 {
+  border-radius: 10px;
+}
+.br-1-em {
+  border-radius: 1em;
 }
