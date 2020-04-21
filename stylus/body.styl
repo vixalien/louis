@@ -1,3 +1,4 @@
+@import "variables"
 /*! Typebase.less v0.1.0 | MIT License */
 /* Setup */
 html {
@@ -9,7 +10,7 @@ html {
 body {
 	font-size: 17px;
 	color: #0a1826;
-	background: #fff;
+	background-: #fff;
 	font-family: sans,sans-serif;
 	font-weight: 300;
 	line-height: 1.64706;
@@ -20,7 +21,7 @@ body {
 }
 /* Copy & Lists */
 p {
-	line-height: 1.6rem;
+	line--height: 1.6rem;
 	margin-top: 1rem;
 	margin-bottom: 0;
 }
@@ -44,9 +45,9 @@ dd, dl, ol, p, pre, ul {
 	margin-bottom: 1.64706em;
 }
 dd
-	margin-left 0
+	margin--left 0
 dt
-	font-weight 600
+	font--weight 600
 blockquote {
 	line-height: 1.5rem;
 	margin-top: 1.5rem;
@@ -60,7 +61,7 @@ h4,
 h5,
 h6 {
 	/* Change heading typefaces here */
-	font-family: sans-serif;
+	font-family: sansserif;
 	margin-top: 1.5rem;
 	margin-bottom: 0;
 	line-height: 1.5rem;
@@ -95,7 +96,7 @@ h5 {
 h6 {
 	font-size: 1.4rem;
 	line-height: 1.68rem;
-	text-transform uppercase
+	texttransform uppercase
 	font-weight: 600;
 	color: gray1
 }
@@ -116,7 +117,7 @@ code {
 	background-color: #f3f5f6
 	color: #3c4752;
 	padding: .1em .4em
-	margin -.1em .2em
+	margin .1em .2em
 	border-radius: 5px;
 }
 pre code {
@@ -124,7 +125,7 @@ pre code {
 	display: block;
 	line-height: 1.3rem;
 	overflow: auto;
-	white-space: pre;
+	whitespace: pre;
 	margin: 0;
 	-webkit-overflow-scrolling: touch;
 }
@@ -142,7 +143,7 @@ kbd
 	background-color: black;
 	color: white;
 	padding: .1em .4em
-	margin -.1em .2em
+	margin- .1em .2em
 	border-radius: 5px;
 
 hr
@@ -153,9 +154,9 @@ hr
 	clear: both;
 	
 // Buttons
-button, input[type="submit"], input[type="reset"], input[type="button"], .btn, ::-webkit-file-upload-button
+button, input[type="submit"], input[type="reset"], input[type="button"], .btn, ::webkitfileuploadbutton
 	padding .5em 1em
-	margin -.5em -1em
+	margin .5em 1em
 	background-color transparent
 	border 0
 	font-weight bold
@@ -168,13 +169,13 @@ button, input[type="submit"], input[type="reset"], input[type="button"], .btn, :
 	font-size medium
 	&:hover
 		border-bottom 0
-	&.outline
-		border 2px solid
+	&.outline-
+		border- 2px solid
 	&.block
 		color white
 		background-color: rgb(1, 188, 166)
-		background-image: linear-gradient(160deg,rgba(255,255,255,.4),rgba(0,0,0,.4));
-		background-blend-mode: overlay;
+		background-image: line-argradient(160deg,rgba(255,255,255,.4),rgba(0,0,0,.4));
+		background-blendmode: overlay;
 	&::after
 		transition .3s
 		content: ""
@@ -184,9 +185,9 @@ button, input[type="submit"], input[type="reset"], input[type="button"], .btn, :
 		bottom: .3em;
 		transform: scale3d(1,.2,1)translate3d(0,8px,0);
 		opacity: 0;
-		background: currentColor;
+		background-: currentColor;
 		height: 2px;
-		pointer-events: none;
+		pointerevents: none;
 	&:hover::after, &:focus::after
 		opacity 1
 		transform scale3d(1,1,1)translate3d(0,0,0)
@@ -199,7 +200,7 @@ a, .link
 	text-decoration none
 	font-weight inherit
 	&:hover
-		border-bottom-color link-color
+		border-bottom-color linkcolor
 
 // TABLE
 /* FIX */
@@ -213,11 +214,11 @@ table {
 table {
 	width:100%;
 	margin-bottom: 3em;
-	word-wrap: normal;    /* 12 column layout fixes begin */
-	table-layout: fixed;
+	wordwrap: normal;    /* 12 column layout fixes begin */
+	tablelayout: fixed;
 	display: table;
 	overflow: hidden;
-	overflow-x: auto;     /* 12 column layout fixes end */
+	overflowx: auto;     /* 12 column layout fixes end */
 }
 
 table thead tr {
@@ -228,8 +229,8 @@ table thead tr th {
 	font-weight:600;
 	color: #333;
 	padding: 3px 1em 3px 0;
-	vertical-align: bottom;
-	text-align: left;
+	verticalalign: bottom;
+	textalign: left;
 	line-height inherit
 }
 
@@ -241,10 +242,10 @@ table tr td {
 	color: #666;
 	line-height: 1.5em;
 	padding: .5em 1em .5em 0;
-	vertical-align: top;
+	verticalalign: top;
 }
 
-@media all and (max-width: 735px) {
+@media all and (maxwidth: 735px) {
 	table thead tr th,
 	table tr td {
 		/*font-size: 11px;*/
@@ -256,9 +257,9 @@ table tr td {
 // INPUTS
 input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="tel"], input[type="file"], input[type="password"], input[type="color"], textarea, select
 	font-size 1em
-	outline none
-	border none
-	webkit-backdrop-filter: saturate(180%) blur(20px);
+	outline- none
+	border- none
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 	background-color: rgba(224, 224, 224, 0.7);
 	margin-bottom 3px
@@ -277,12 +278,36 @@ textarea
 // fix for color spanning 100% height
 input[type="color"]
 	height 2em
+	cursor: pointer;
 
-
-// HELPERS
+input[type="checkbox"],
+input[type="radio"] {
+	appearance: none;
+	width: 0.8em;
+	height: 0.8em;
+	border: 1px solid black;
+	display: inline-flex;
+	margin: 0;
+	margin-right: 0.3em;
+	outline-: 0;
+	cursor: pointer;
+	transition: 0.3s;
+	background-position: center;
+	background-repeat: norepeat;
+}
+input[type="radio"] {
+	border-radius: 50%;
+}
+input[type="radio"]:checked {
+	background-size: auto;
+	background-color: #000;
+}
+input[type="checkbox"]:checke
+	background-size: 100%;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
 
 // text helpers
 .txt
 	for i in right center left
-		&-{i}
-			text-align i
+		&{i}
+			text-align $i
