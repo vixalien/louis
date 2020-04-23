@@ -1,175 +1,186 @@
 @import "variables"
 /*! Typebase.less v0.1.0 | MIT License */
 /* Setup */
-html {
+html
 	/* Change default typefaces here */
-	font-family: serif;
-	font-size: 1.2em;
-	-webkit-font-smoothing: antialiased;
-}
-body, .body {
-	font-size: 17px;
-	color: #0a1826;
-	background-: #fff;
-	font-family: sans,sans-serif;
-	font-weight: 300;
-	line-height: 1.64706;
-	letter-spacing: .012em;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	-webkit-overflow-scrolling: touch;
-}
+	font-family serif
+	font-size 1.2em
+	-webkit-font-smoothing antialiased
+
+body, html
+	height 100vh
+body, .body
+	font-size 17px
+	color #0a1826
+	background #fff
+	font-family sans,sans-serif
+	font-weight 300
+	line-height 1.64706
+	letter-spacing .012em
+	text-rendering optimizeLegibility
+	text-size-adjust 100%;
+	-webkit-overflow-scrolling touch
+
+
+/* Responsive Stuff */
+body.resp
+	padding 0
+	display flex
+	flex-direction column
+	& > *
+		padding 1em
+	main
+		flex 1
+
+/* Container Stuff */
+body.container 
+	padding 0
+	display flex
+	flex-direction column
+	& > *
+		padding 1em
+		@media (min-width 44em)
+			padding 10px calc(50% - 16em)
+	main
+		flex 1
+
 /* Copy & Lists */
-p, .body {
-	line--height: 1.6rem;
-	margin-top: 1rem;
-	margin-bottom: 0;
+p, .body
+	line-height 1.6rem
+	margin-top 1rem
+	margin-bottom 0
 	text-align justify
-}
-ul,
-ol {
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-ul li,
-ol li {
-	line-height: 1.5rem;
-}
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-dd, dl, ol, p, pre, ul {
-	margin-bottom: 1.64706em;
-}
+
+ul, ol
+	margin-top 1.5rem
+	margin-bottom 1.5rem
+
+ul li, ol li
+	line-height 1.5rem
+
+ul ul, ol ul, ul ol, ol ol
+	margin-top 0
+	margin-bottom 0
+
+dd, dl, ol, p, pre, ul
+	margin-bottom 1.64706em
+
 dd
-	margin--left 0
+	margin-left 0
 dt
-	font--weight 600
-blockquote {
-	line-height: 1.5rem;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
+	font-weight 600
+
+blockquote 
+	line-height 1.5rem
+	margin-top 1.5rem
+	margin-bottom 1.5rem
+
 /* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.txt-h1,
-.txt-h2,
-.txt-h3,
-.txt-h4,
-.txt-h5,
-.txt-h6,
-.txt-head {
+h1, h2, h3, h4, h5, h6, .txt-h1, .txt-h2, .txt-h3, .txt-h4, .txt-h5, .txt-h6, .txt-head
 	/* Change heading typefaces here */
-	font-family: sansserif;
-	margin-top: 1.5rem;
-	margin-bottom: 0;
-	line-height: 1.2;
-}
-h1, .txt-h1 {
-	font-size: 2.797em;
-	margin-top: 3rem;
-	font-weight: 300;
-}
-h2, .txt-h2 {
-	font-size: 2.452em;
-	margin-top: 3rem;
-	font-weight: 400;
-}
-h3, .txt-h3 {
-	font-size: 2.138em;
-	font-weight: 500;
-}
-h4, .txt-h4 {
-	font-size: 1.853em
-	font-weight: 600;
-}
-h5, .txt-h5 {
-	font-size: 1.594em;
-	font-weight: 600;
-}
-h6, .txt-h6 {
-	font-size: 1.4rem;
+	font-family sans-serif
+	margin-top 1.5rem
+	margin-bottom .5em
+	line-height 1.2
+
+h1, .txt-h1
+	font-size 2.797em
+	margin-top 3rem
+	font-weight 300
+
+h2, .txt-h2
+	font-size 2.452em
+	margin-top 3rem
+	font-weight 400
+
+h3, .txt-h3
+	font-size 2.138em
+	font-weight 500
+
+h4, .txt-h4
+	font-size 1.853em
+	font-weight 600
+
+h5, .txt-h5
+	font-size 1.594em
+	font-weight 600
+
+h6, .txt-h6
+	font-size 1.4rem
 	text-transform uppercase
-	font-weight: 600;
-	color: gray1
-}
+	font-weight 600
+	color gray1
+
 /* Tables */
-table {
-	margin-top: 1.5rem;
-	border-spacing: 0px;
-	border-collapse: collapse;
-}
+table
+	margin-top 1.5rem
+	border-spacing 0px
+	border-collapse collapse
+
 table td,
-table th {
-	padding: 0;
-	line-height: 33px;
-}
+table th 
+	padding 0
+	line-height 33px
+
 /* Code blocks */
-code {
-	vertical-align: bottom;
-	background-color: #f3f5f6
-	color: #3c4752;
-	padding: .1em .4em
+code
+	vertical-align bottom
+	background-color #f3f5f6
+	color #3c4752
+	padding .1em .4em
 	margin .1em .2em
-	border-radius: 5px;
-}
-pre code {
-	padding: 1em;
-	display: block;
-	line-height: 1.3rem;
-	overflow: auto;
-	whitespace: pre;
-	margin: 0;
-	-webkit-overflow-scrolling: touch;
-}
+	border-radius 5px
+
+pre code
+	padding 1em
+	display block
+	line-height 1.3rem
+	overflow auto
+	white-space pre
+	margin 0
+	-webkit-overflow-scrolling touch
+
 /* Leading paragraph text */
-.lead {
-	font-size: 1.414rem;
+.lead
+	font-size 1.414rem
 	line-height 1.2em
-}
+
 /* Hug the block above you */
-.hug {
-	margin-top: 0;
-}
+.hug
+	margin-top 0
 
+/* Keyboard code  */
 kbd
-	background-color: black;
-	color: white;
-	padding: .1em .4em
-	margin- .1em .2em
-	border-radius: 5px;
+	background-color black
+	color white
+	padding .1em .4em
+	margin .1em .2em
+	border-radius 5px
 
+/* Horizontal rule */
 hr
-	border: 0;
-	border-bottom: 1px solid;
-	height: 0;
-	margin: 1.6em 0;
-	clear: both;
+	border 0
+	border-bottom 1px solid
+	height 0
+	margin 1.6em 0
+	clear both
 
-// Links
+/* Links */
 a, .link
-	color: inherit;
-	border-bottom: 1px solid;
-	cursor: pointer;
+	color inherit
+	border-bottom 1px solid
+	cursor pointer
 	text-decoration none
 	font-weight inherit
 	&:hover
+		color link-color
 		border-bottom-color link-color
+	&.red
+		&:hover
+			color red
+			border-bottom-color red
 
-.btn-bag
-	padding .5em 1em
-	margin 0
-
-// Buttons
+/* Buttons */
 button, input[type="submit"], input[type="reset"], input[type="button"], .btn
 	padding .5em 1em
 	margin -.5em -1em
@@ -186,19 +197,19 @@ button, input[type="submit"], input[type="reset"], input[type="button"], .btn
 	&:after
 		transition .3s
 		content ""
-		position: absolute;
-		left: 1em;
-		right: 1em;
-		bottom: .3em;
-		transform: scale3d(1,.2,1) translate3d(0,8px,0);
-		opacity: 0;
-		background: currentColor;
-		height: 2px;
-		pointer-events: none;
-	&:hover, &:focus
+		position absolute
+		left 1em
+		right 1em
+		bottom .3em
+		transform scale3d(1,.2,1) translate3d(0,8px,0);
+		opacity 0
+		background currentColor
+		height 2px
+		pointer-events none
+	&:hover, &:focus, &.active
 		&::after
-			opacity: 1;
-			transform: scale3d(1,1,1)translate3d(0,0,0);
+			opacity 1
+			transform scale3d(1,1,1)translate3d(0,0,0);
 	&.outline
 		border 2px solid
 	&.block
@@ -207,54 +218,68 @@ button, input[type="submit"], input[type="reset"], input[type="button"], .btn
 		background-blend-mode overlay
 		color white
 
-// TABLE
-/* FIX */
+/* Button bag, provide padding for buttons */
+.btn-bag
+	padding .5em 1em
+	margin 0 !important
+	&-rl
+		padding 0em 1em
+	&-tb
+		padding .5em 0em
+	&-resp
+		padding 0em 1em
+		@media (max-width 800px)
+			padding .5em 0em
+
+/* TABLE */
+
+/* fix, we can't do much without these lines of code */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse collapse
+	border-spacing 0
 }
 
 /* TABLES */
 
 table {
-	width:100%;
-	margin-bottom: 3em;
-	wordwrap: normal;    /* 12 column layout fixes begin */
-	tablelayout: fixed;
-	display: table;
-	overflow: hidden;
-	overflowx: auto;     /* 12 column layout fixes end */
+	width 100%;
+	margin-bottom 3em
+	word-wrap normal;    /* 12 column layout fixes begin */
+	table-layout fixed
+	display table
+	overflow hidden
+	overflow-x auto;     /* 12 column layout fixes end */
 }
 
 table thead tr {
-	border-bottom: 1px solid #333;
+	border-bottom 1px solid #333
 }
 
 table thead tr th {
-	font-weight:600;
-	color: #333;
-	padding: 3px 1em 3px 0;
-	verticalalign: bottom;
-	textalign: left;
+	font-weight 600
+	color #333
+	padding 3px 1em 3px 0
+	vertical-align bottom
+	text-align left
 	line-height inherit
 }
 
 table tr {
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom 1px solid #e6e6e6
 }
 
 table tr td {
-	color: #666;
-	line-height: 1.5em;
-	padding: .5em 1em .5em 0;
-	verticalalign: top;
+	color #666
+	line-height 1.5em
+	padding .5em 1em .5em 0
+	verticalalign top
 }
 
-@media all and (maxwidth: 735px) {
+@media all and (maxwidth 735px) {
 	table thead tr th,
 	table tr td {
-		/*font-size: 11px;*/
-		line-height:1.2em;
+		/*font-size 11px;*/
+		line-height 1.2em
 	}
 }
 
@@ -283,33 +308,33 @@ textarea
 // fix for color spanning 100% height
 input[type="color"]
 	height 2em
-	cursor: pointer;
+	cursor pointer
 
 input[type="checkbox"],
 input[type="radio"] {
-	appearance: none;
-	width: 0.8em;
-	height: 0.8em;
-	border: 1px solid black;
-	display: inline-flex;
-	margin: 0;
-	margin-right: 0.3em;
-	outline-: 0;
-	cursor: pointer;
-	transition: 0.3s;
-	background-position: center;
-	background-repeat: norepeat;
+	appearance none
+	width 0.8em
+	height 0.8em
+	border 1px solid black
+	display inline-flex
+	margin 0
+	margin-right 0.3em
+	outline 0
+	cursor pointer
+	transition 0.3s
+	background-position center
+	background-repeat norepeat
 }
 input[type="radio"] {
-	border-radius: 50%;
+	border-radius 50%;
 }
 input[type="radio"]:checked {
-	background-size: auto;
-	background-color: #000;
+	background-size auto
+	background-color #000
 }
 input[type="checkbox"]:checked
-	background-size: 100%;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
+	background-size 100%;
+	background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHRpdGxlPmlvbmljb25zLXY1LWU8L3RpdGxlPjxwb2x5bGluZSBwb2ludHM9IjQxNiAxMjggMTkyIDM4NCA5NiAyODgiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6c3F1YXJlO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDo0NHB4Ii8+PC9zdmc+");
 
 // text helpers
 .txt
@@ -317,9 +342,9 @@ input[type="checkbox"]:checked
 		&-{i}
 			text-align i
 
-@media (max-width: 560px)
+@media (max-width 560px)
 	.txt-justify
-		text-align:unset
+		text-align unset
 
 .txt-hyphens
 	hyphens auto
@@ -340,28 +365,28 @@ input[type="checkbox"]:checked
 	&-roman, h1 > em
 		font-weight normal
 	&-sub
-		font-feature-settings: "sups"
+		font-feature-settings "sups"
 	&-sup
-		font-feature-settings: "subs"
+		font-feature-settings "subs"
 
 sub,sup, .badge
-	font-size: 50%;
-	line-height: 0
+	font-size 50%;
+	line-height 0
 .badge
 	color #35a8c9
 
-sizes = 1 2 3 5 10
+sizes = 0 1 2 3 5 10
 colors = {black: gray2, gray: gray1, light: gray3}
 
 // FLEX
 .flex-bar
 	& > *
-		margin 5px
+		margin auto 0
 	&.flex-eq
 		& > *
 			flex 1
 	&.flex-resp
-		@media (max-width 600px)
+		@media (max-width 800px)
 			flex-direction column
 	display inline-flex
 	justify-content space-between
@@ -384,6 +409,14 @@ colors = {black: gray2, gray: gray1, light: gray3}
 		color ongray3
 		padding 10px
 
+.txt
+	&-black
+		color gray2
+	&-gray
+		color gray1
+	&-light
+		color gray3
+
 .txt-semibold
 	font-weight 600
 .txt-medium
@@ -403,3 +436,13 @@ for font in serif sans-serif antipode philippa cursive handwriting auto fantasy 
 			border-radius (size)px
 		&-1-em
 			border-radius 1em
+
+.pd
+	&-1-em
+		padding 1em
+	for size in sizes
+		&-{size}
+			padding (size)px
+		&-rl-{size}
+			padding-left (size)px
+			padding-right (size)px
