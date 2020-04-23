@@ -21,6 +21,16 @@ body, .body
 	text-size-adjust 100%;
 	-webkit-overflow-scrolling touch
 
+/* Container Stuff */
+body.container 
+	display flex
+	flex-direction column
+	& > *
+		padding 1em
+		@media (min-width 44em)
+			padding 10px calc(50% - 16em)
+	main
+		flex 1
 
 /* Responsive Stuff */
 body.resp
@@ -29,18 +39,6 @@ body.resp
 	flex-direction column
 	& > *
 		padding 1em
-	main
-		flex 1
-
-/* Container Stuff */
-body.container 
-	padding 0
-	display flex
-	flex-direction column
-	& > *
-		padding 1em
-		@media (min-width 44em)
-			padding 10px calc(50% - 16em)
 	main
 		flex 1
 
